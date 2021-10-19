@@ -24,7 +24,7 @@
 {
     "repository": {
         "repositoryArn": "arn:aws:ecr:us-east-2:[SUBSCIPTION-ID-OF-AWS]:repository/eksdemoecr",
-        "registryId": "472804039072",
+        "registryId": "[SUBSCIPTION-ID-OF-AWS]",
         "repositoryName": "eksdemoecr",
         "repositoryUri": "[SUBSCIPTION-ID-OF-AWS].dkr.ecr.us-east-2.amazonaws.com/eksdemoecr",
         "createdAt": "2021-10-19T16:29:22+05:30",

@@ -23,10 +23,10 @@
 ``` javascript
 {
     "repository": {
-        "repositoryArn": "arn:aws:ecr:us-east-2:472804039072:repository/eksdemoecr",
+        "repositoryArn": "arn:aws:ecr:us-east-2:[SUBSCIPTION-ID-OF-AWS]:repository/eksdemoecr",
         "registryId": "472804039072",
         "repositoryName": "eksdemoecr",
-        "repositoryUri": "472804039072.dkr.ecr.us-east-2.amazonaws.com/eksdemoecr",
+        "repositoryUri": "[SUBSCIPTION-ID-OF-AWS].dkr.ecr.us-east-2.amazonaws.com/eksdemoecr",
         "createdAt": "2021-10-19T16:29:22+05:30",
         "imageTagMutability": "MUTABLE",
         "imageScanningConfiguration": {
@@ -43,14 +43,14 @@
     - The command is as below
         - aws ecr get-login-password --region [REGIOn-NAME] | docker login --username AWS --password-stdin [SUBSCRIPTION-ID-OF-AWS].dkr.ecr.us-east-2.amazonaws.com/[REPOSITORY-NAME]
         - e.g.
-            - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 472804039072.dkr.ecr.us-east-2.amazonaws.com/eksdemoecr
+            - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin [SUBSCIPTION-ID-OF-AWS].dkr.ecr.us-east-2.amazonaws.com/eksdemoecr
 - PUSH the DOcker Image from the Local to ECR
     - Tag the Docker Image to ECR-NAME          
         - docker tag [IAMEG-NAME]:[TAG-NAME] [SUBSCRIPTION-ID-OF-AWS].dkr.ecr.[REGION-NAME].amazonaws.com/[REPOSITORY-NAME]:[TAG]      
         - e.g.
-            - docker tag eksdemo:v1 472804039072.dkr.ecr.us-east-2.amazonaws.com/eksdemoecr:v1 
+            - docker tag eksdemo:v1 [SUBSCIPTION-ID-OF-AWS].dkr.ecr.us-east-2.amazonaws.com/eksdemoecr:v1 
     - Push the newly tagged Image    
-        - docker push 472804039072.dkr.ecr.us-east-2.amazonaws.com/eksdemoecr:v1    
+        - docker push [SUBSCIPTION-ID-OF-AWS].dkr.ecr.us-east-2.amazonaws.com/eksdemoecr:v1    
 
 - Creating EKS
     - EKS is a CLuster Manager Service provide by AWS for managing Microservices based apps
